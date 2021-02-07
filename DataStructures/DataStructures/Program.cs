@@ -6,7 +6,7 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            var buffer = new CircularBuffer(capacity: 3);
+            var buffer = new CircularBuffer<double>(capacity: 3);
 
             while(true)
             {
@@ -21,13 +21,11 @@ namespace DataStructures
                 break;
             }
 
-            buffer.Write("Hello");
-
             var sum = 0.0;
             Console.WriteLine("Buffer: ");
             while(!buffer.IsEmpty)
             {               
-                sum += (double)buffer.Read();                
+                sum += buffer.Read();                
             }
             Console.WriteLine(sum);
         }
