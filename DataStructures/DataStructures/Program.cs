@@ -21,11 +21,13 @@ namespace DataStructures
                 break;
             }
 
+            buffer.Write("Hello");
+
             var sum = 0.0;
             Console.WriteLine("Buffer: ");
             while(!buffer.IsEmpty)
             {               
-                sum += buffer.Read();                
+                sum += (double)buffer.Read();                
             }
             Console.WriteLine(sum);
         }

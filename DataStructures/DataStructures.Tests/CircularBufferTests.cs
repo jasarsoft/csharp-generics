@@ -27,8 +27,8 @@ namespace DataStructures.Tests
         public void First_In_First_Out_When_Not_Full()
         {
             var buffer = new CircularBuffer(capacity: 3);
-            var value1 = 1.1;
-            var value2 = 2.0;
+            var value1 = "1.1";
+            var value2 = "2.0";
 
             buffer.Write(value1);
             buffer.Write(value2);

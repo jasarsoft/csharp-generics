@@ -4,7 +4,7 @@ namespace DataStructures
 {
     public class CircularBuffer
     {
-        private double[] _buffer;
+        private object[] _buffer;
         private int _start;
         private int _end;
 
@@ -14,12 +14,12 @@ namespace DataStructures
         
         public CircularBuffer(int capacity)
         {
-            _buffer = new double[capacity+1];
+            _buffer = new object[capacity+1];
             _start = 0;
             _end = 0;
         }
 
-        public void Write(double value)
+        public void Write(object value)
         {
             _buffer[_end] = value;
             _end = (_end + 1) % _buffer.Length;
@@ -29,7 +29,7 @@ namespace DataStructures
             }
         }
 
-        public double Read()
+        public object Read()
         {
             var result = _buffer[_start];
             _start = (_start + 1) % _buffer.Length;
